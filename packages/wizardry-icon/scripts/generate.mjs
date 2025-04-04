@@ -19,10 +19,15 @@ const ordinalToWord = (name) => {
     '4-k': 'FourK',
     '4k': 'FourK',
   };
-  return name.replace(/\b(1st|2nd|3rd|3-d|4-k|4k|3d)\b/g, (match) => ordinalMap[match] || match);
+  console.log(name, 'name')
+  return name.replace(/(1st|2nd|3rd|3-d|4-k|4k|3d)/g, (match) => {
+    console.log('match', match);
+    return ordinalMap[match] || match
+  });
 }
 
 function convertFileNameToComponentName(fileName) {
+  console.log('ordinalToWord(fileName)', ordinalToWord(fileName))
   return _.upperFirst(_.camelCase(ordinalToWord(fileName)));
 }
 

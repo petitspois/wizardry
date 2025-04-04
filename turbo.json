@@ -17,7 +17,7 @@
       "cache": false,
       "persistent": true
     },
-    "generate:component": {
+    "build:icons": {
       "cache": false,
       "outputs": []
     }

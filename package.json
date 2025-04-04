@@ -8,7 +8,8 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "pub:release": "cd packages/wizardry-icon && pnpm pub:release"
+    "pub:release": "cd packages/wizardry-icon && pnpm pub:release",
+    "build:icons": "turbo run build:icons"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
