@@ -20,6 +20,7 @@
     "lint": "eslint . --max-warnings 0",
     "build:icons": "node scripts/generate-icons.js",
     "build": "tsup",
+    "pub:release": "pnpm build && pnpm publish",
     "check-types": "tsc --noEmit"
   },
   "files": [
