@@ -1,0 +1,59 @@
+{
+  "name": "wizardry",
+  "version": "0.0.1",
+  "description": "Add components to your apps.",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "author": {
+    "name": "petitspois"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petitspois/wizardry.git",
+    "directory": "packages/wizardry-icon"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "build:icons": "node scripts/generate-icons.js",
+    "build": "tsup",
+    "check-types": "tsc --noEmit"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "components",
+    "ui",
+    "icon",
+    "aoian",
+    "shadcn",
+    "ai",
+    "wizardry"
+  ],
+  "type": "module",
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@svgr/cli": "^8.1.0",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-prettier": "^8.1.0",
+    "@turbo/gen": "^2.4.4",
+    "@types/node": "^22.13.10",
+    "@types/react": "19.0.12",
+    "@types/react-dom": "19.0.4",
+    "eslint": "^9.23.0",
+    "lodash": "^4.17.21",
+    "svgson": "^5.3.1",
+    "tsup": "^8.4.0",
+    "typescript": "5.8.2"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
