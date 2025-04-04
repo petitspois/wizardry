@@ -1,7 +1,14 @@
-import {createElement, forwardRef, ForwardRefExoticComponent, RefAttributes, SVGProps} from "react";
+import {
+  createElement,
+  forwardRef,
+  ForwardRefExoticComponent,
+  RefAttributes,
+  ReactSVGElement,
+  SVGProps,
+} from "react";
 import defaultAttributes from "./defaultAttributes";
 
-export type IconSvgElement = [elementName: keyof SVGProps<string>, attrs: Record<string, string>][];
+export type IconSvgElement = [elementName: ReactSVGElement['type'], attrs: Record<string, string>][];
 
 export type IconSvgObject = IconSvgElement
 
