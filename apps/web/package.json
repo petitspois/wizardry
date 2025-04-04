@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "www",
   "version": "0.1.0",
   "type": "module",
   "private": true,
@@ -11,10 +11,10 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/wizardry-icon": "workspace:*",
     "next": "^15.2.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "wizardry-icon": "^0.0.1"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

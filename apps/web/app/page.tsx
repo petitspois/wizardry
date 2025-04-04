@@ -1,4 +1,4 @@
-import {History}  from '@repo/wizardry-icon'
+import {History}  from 'wizardry-icon'
 
 
 export default function Home() {

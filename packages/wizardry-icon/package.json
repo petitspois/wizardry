@@ -1,6 +1,6 @@
 {
   "name": "wizardry-icon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add components to your apps.",
   "exports": {
     ".": {
@@ -53,7 +53,7 @@
     "tsup": "^8.4.0",
     "typescript": "5.8.2"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   }
