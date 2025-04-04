@@ -29,7 +29,7 @@ export function Search(props: Props) {
             </SelectContent>
           </Select>
           <div className="w-full relative">
-            <SearchFirst className="absolute size-4 top-1/2 left-2 -translate-y-1/2" />
+            <SearchFirst strokeWidth={2} className="absolute size-4 top-1/2 left-2 -translate-y-1/2" />
             <Input type="email" placeholder="Search 1000 Icons" className="pl-8 h-10 border-none bg-input/40 focus-visible:ring-[1px]" />
           </div>
         </div>

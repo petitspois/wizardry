@@ -63,8 +63,8 @@ importers:
         specifier: ^1.2.5
         version: 1.2.5
       wizardry-icon:
-        specifier: ^0.0.3
-        version: 0.0.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^0.0.4
+        version: 0.0.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -3446,8 +3446,8 @@ packages:
     engines: {node: '>= 8'}
     hasBin: true
 
-  wizardry-icon@0.0.3:
-    resolution: {integrity: sha512-RG9W649a9IfrPUdmtNZWQ0pT+XIG0Bo92ngW5f0RGwH6hGkUZRzJ3FL0B+iftEjlAK9BxtHWb7ZHtVnEpZvx4A==}
+  wizardry-icon@0.0.4:
+    resolution: {integrity: sha512-sOvd634K6fEUOD1JBfO4WPpttJQ2+7fT/PKnAfJhbz1cyzC1Mt/CIgMG1jgEeGFpyXV3Z8SEPQYkowVN8wn68Q==}
     peerDependencies:
       react: ^19.1.0
       react-dom: ^19.1.0
@@ -6965,7 +6965,7 @@ snapshots:
     dependencies:
       isexe: 2.0.0
 
-  wizardry-icon@0.0.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  wizardry-icon@0.0.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)

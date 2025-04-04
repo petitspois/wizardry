@@ -27,7 +27,7 @@ const createComponent = (iconName: string, svgObject: IconSvgObject): React.FC<R
       {
         color = 'currentColor',
         size = 24,
-        strokeWidth = 1.5,
+        strokeWidth = 2,
         className = '',
         children,
         ...rest
