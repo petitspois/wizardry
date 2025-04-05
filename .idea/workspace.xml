@@ -6,13 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="3b0aca3a-eb53-4c76-a0c1-b37df84b8faf" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/app/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/app/page.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/app/(dashboard)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/app/(dashboard)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/search.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-icon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/wizardry-icon/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-icon/scripts/generate.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/wizardry-icon/scripts/generate.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-icon/src/icons/filter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-icon/src/icons/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-icon/src/icons/search_first.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-icon/src/icons/search_second.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-icon/src/icons/search_third.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-icon/src/source/filter.svg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/wizardry-icon/src/source/AI/filter-line.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-icon/src/source/search1st.svg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/wizardry-icon/src/source/AI/search-one-line.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-icon/src/source/search2nd.svg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/wizardry-icon/src/source/AI/search-two-line.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-icon/src/source/search3rd.svg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/wizardry-icon/src/source/AI/search-three-line.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,31 +38,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/jonny/develop/wizardry/apps/web/components",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "configurable.tailwindcss",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jonny/develop/wizardry/packages/wizardry-icon/src/source/Other&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/jonny/develop/wizardry/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/wizardry-icon/src/source/Other" />
+      <recent name="$PROJECT_DIR$/packages/wizardry-icon/src/source" />
       <recent name="$PROJECT_DIR$/apps/web/components" />
       <recent name="$PROJECT_DIR$/apps/web/app" />
       <recent name="$PROJECT_DIR$/apps/web/app/(dashboard)" />
-      <recent name="$PROJECT_DIR$/apps/web" />
-      <recent name="$PROJECT_DIR$/packages/wizardry-icon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/wizardry-icon/src/source/AI" />
       <recent name="$PROJECT_DIR$/packages/wizardry-icon/src" />
       <recent name="$PROJECT_DIR$/packages/wizardry-icon" />
       <recent name="$PROJECT_DIR$/packages/wizardry-icon/src/scripts" />
@@ -82,6 +90,15 @@
       <workItem from="1743775536811" duration="622000" />
       <workItem from="1743776258089" duration="522000" />
       <workItem from="1743776822131" duration="219000" />
+      <workItem from="1743777061706" duration="8514000" />
+      <workItem from="1743859849613" duration="692000" />
+      <workItem from="1743860549811" duration="189000" />
+      <workItem from="1743860752172" duration="100000" />
+      <workItem from="1743860857705" duration="56000" />
+      <workItem from="1743860929576" duration="16000" />
+      <workItem from="1743860951063" duration="241000" />
+      <workItem from="1743861215062" duration="7333000" />
+      <workItem from="1743873508362" duration="3876000" />
     </task>
     <servers />
   </component>

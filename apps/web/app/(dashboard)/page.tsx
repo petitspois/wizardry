@@ -1,8 +1,9 @@
 import React from "react"
-import { Metadata } from "next"
-import { ArrowRight } from "lucide-react"
-import { Search } from '@/components/search'
-import { Collection } from "@/components/collection"
+import {Metadata} from "next"
+import {ArrowRight} from "lucide-react"
+import {Search} from '@/components/search'
+import {Collection} from "@/components/collection"
+import {IconCollection} from '@/components/icon-collection'
 
 const title = "Wizardry Icons"
 const description =
@@ -76,12 +77,7 @@ export default function IndexPage() {
           </div>
         </div>
       </div>
-      <div className="border-grid border-b">
-        <Search />
-      </div>
-      <div className="border-grid">
-        <Collection />
-      </div>
+      <IconCollection/>
     </>
   )
 }

@@ -1,11 +1,14 @@
 {
   "name": "wizardry-icon",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Add components to your apps.",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    "./data.json": {
+      "default": "./data.json"
     }
   },
   "author": {
@@ -24,7 +27,8 @@
     "check-types": "tsc --noEmit"
   },
   "files": [
-    "dist"
+    "dist",
+    "src/data.json"
   ],
   "keywords": [
     "components",
