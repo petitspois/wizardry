@@ -7,7 +7,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import {Input} from "@/components/ui/input"
-import {FilterLine, SearchOneLine} from "wizardry-icon"
+import {FilterLine, SearchOneLine} from "wizardry-react"
 import {useIconContext} from '@/context/icon-context'
 import { useDebounceFn } from 'ahooks'
 

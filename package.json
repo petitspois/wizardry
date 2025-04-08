@@ -4,17 +4,17 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "generate:component": "turbo --filter=wizardry-icon generate:component",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "pub:release": "cd packages/wizardry-icon && pnpm pub:release",
-    "build:www": "pnpm --filter=www build"
+    "build:www": "pnpm --filter=www build",
+    "addjsons": "node scripts/addMissingIconJsonFiles.mjs"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
     "turbo": "^2.4.4",
-    "typescript": "5.8.2"
+    "typescript": "5.8.2",
+    "@wizardry/helpers": "workspace:*"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {

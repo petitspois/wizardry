@@ -1,6 +1,6 @@
 'use client'
 import * as React from 'react';
-import * as Icons from 'wizardry-icon';
+import * as Icons from 'wizardry-react';
 type IconItemProps = {
   componentName: string;
   name: string;

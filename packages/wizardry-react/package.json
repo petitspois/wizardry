@@ -1,0 +1,56 @@
+{
+  "name": "wizardry-react",
+  "version": "0.0.7",
+  "description": "Add components to your apps.",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./data.json": {
+      "default": "./data.json"
+    }
+  },
+  "author": {
+    "name": "petitspois"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petitspois/wizardry.git",
+    "directory": "packages/wizardry-react"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withDynamicImports --separateAliasesFile --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
+    "pub:release": "pnpm build && pnpm publish",
+    "check-types": "tsc --noEmit"
+  },
+  "files": [
+    "dist",
+    "src/data.json"
+  ],
+  "keywords": [
+    "components",
+    "ui",
+    "icon",
+    "ai",
+    "wizardry"
+  ],
+  "type": "module",
+  "devDependencies": {
+    "@wizardry/build-icons": "workspace:*",
+    "@wizardry/shared": "workspace:*",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@turbo/gen": "^2.4.4",
+    "@types/node": "^22.13.10",
+    "@types/react": "19.0.12",
+    "@types/react-dom": "19.0.4",
+    "eslint": "^9.23.0",
+    "lodash": "^4.17.21",
+    "typescript": "5.8.2"
+  },
+  "peerDependencies": {
+    "react": "^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  }
+}
