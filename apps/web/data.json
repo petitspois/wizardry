@@ -1,12 +1,8 @@
 [
   {
     "name": "filter-line",
-    "categories": [
-      "filter"
-    ],
-    "tags": [
-      "line"
-    ]
+    "categories": [],
+    "tags": []
   },
   {
     "name": "search-one-line",

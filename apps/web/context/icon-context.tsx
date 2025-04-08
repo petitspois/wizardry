@@ -1,5 +1,5 @@
 import * as React from 'react';
-import iconData from '../../../data.json';
+import iconData from '../data.json';
 
 type IconData = {
   componentName: string;

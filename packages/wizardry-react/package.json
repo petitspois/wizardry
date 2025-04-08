@@ -1,14 +1,11 @@
 {
   "name": "wizardry-react",
   "version": "0.0.7",
-  "description": "Add components to your apps.",
+  "description": "A Wizardry icon library package for React applications.",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    },
-    "./data.json": {
-      "default": "./data.json"
+      "types": "./dist/wizardry-react.d.ts",
+      "default": "./dist/esm/wizardry-react.js"
     }
   },
   "author": {
@@ -20,14 +17,31 @@
     "directory": "packages/wizardry-react"
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
+    "build": "pnpm clean && pnpm build:icons && pnpm typecheck && pnpm build:bundles",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts && rm -f dynamic.* && rm -f dynamicIconImports.d.ts",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withDynamicImports --separateAliasesFile --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
-    "pub:release": "pnpm build && pnpm publish",
-    "check-types": "tsc --noEmit"
+    "build:bundles": "rollup -c ./rollup.config.mjs",
+    "typecheck": "tsc",
+    "typecheck:watch": "tsc -w",
+    "test": "pnpm build:icons && vitest run",
+    "test:watch": "vitest watch",
+    "version": "pnpm version --git-tag-version=false"
   },
+  "amdName": "wizardry-react",
+  "main": "dist/cjs/wizardry-react.js",
+  "main:umd": "dist/umd/wizardry-react.js",
+  "module": "dist/esm/wizardry-react.js",
+  "unpkg": "dist/umd/wizardry-react.min.js",
+  "typings": "dist/wizardry-react.d.ts",
+  "sideEffects": false,
   "files": [
     "dist",
-    "src/data.json"
+    "dynamic.mjs",
+    "dynamic.js.map",
+    "dynamic.d.ts",
+    "dynamicIconImports.mjs",
+    "dynamicIconImports.js.map",
+    "dynamicIconImports.d.ts"
   ],
   "keywords": [
     "components",
@@ -38,6 +52,7 @@
   ],
   "type": "module",
   "devDependencies": {
+    "@wizardry/rollup-plugins": "workspace:*",
     "@wizardry/build-icons": "workspace:*",
     "@wizardry/shared": "workspace:*",
     "@repo/eslint-config": "workspace:*",
@@ -46,8 +61,10 @@
     "@types/node": "^22.13.10",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
+    "rollup": "^4.22.4",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-preserve-directives": "^0.4.0",
     "eslint": "^9.23.0",
-    "lodash": "^4.17.21",
     "typescript": "5.8.2"
   },
   "peerDependencies": {

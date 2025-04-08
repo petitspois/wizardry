@@ -1,6 +1,6 @@
 'use client';
 
-import { createElement, forwardRef, useEffect, useState } from 'react';
+import {createElement, forwardRef, JSX, useEffect, useState} from 'react';
 import { IconNode, WizardryIcon, WizardryProps } from './types';
 import dynamicIconImports from './dynamicIconImports';
 import Icon from './Icon';
@@ -18,7 +18,7 @@ interface DynamicIconComponentProps extends WizardryProps {
 
 async function getIconNode(name: IconName) {
   if (!(name in dynamicIconImports)) {
-    throw new Error('[lucide-react]: Name in Lucide DynamicIcon not found');
+    throw new Error('[wizardry-react]: Name in Wizardry DynamicIcon not found');
   }
 
   // TODO: Replace this with a generic iconNode package.
