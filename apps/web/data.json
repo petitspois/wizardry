@@ -1,22 +1,39 @@
 [
   {
     "name": "filter-line",
-    "categories": [],
-    "tags": []
+    "categories": [
+      "system",
+      "ai"
+    ],
+    "tags": [
+      "filter"
+    ]
   },
   {
     "name": "search-one-line",
-    "categories": [],
-    "tags": []
+    "categories": [
+      "system"
+    ],
+    "tags": [
+      "search"
+    ]
   },
   {
     "name": "search-three-line",
-    "categories": [],
-    "tags": []
+    "categories": [
+      "system"
+    ],
+    "tags": [
+      "search"
+    ]
   },
   {
     "name": "search-two-line",
-    "categories": [],
-    "tags": []
+    "categories": [
+      "system"
+    ],
+    "tags": [
+      "search"
+    ]
   }
 ]

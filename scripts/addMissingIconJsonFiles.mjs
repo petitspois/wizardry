@@ -36,7 +36,7 @@ const data = svgFiles.map((svgFile) => {
   return {
     name: iconName,
     categories: [],
-    tags: [],
+    tags: [iconName.split('-')[0]],
   };
 });
 

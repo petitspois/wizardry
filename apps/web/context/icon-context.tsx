@@ -1,15 +1,19 @@
 import * as React from 'react';
 import iconData from '../data.json';
+import {CATEGORIES} from '@/categories'
+
 
 type IconData = {
-  componentName: string;
   name: string;
-  category: string;
+  categories: string[];
+  tags: string[]
 };
+
+type Category = {label: string, value: string}
 
 type IconContextType = {
   icons: IconData[];
-  categories: {label: string, value: string}[];
+  categories: Category[];
   filteredIcons: IconData[];
   search: (query: string) => void;
   filterByCategory: (category: string) => void;
@@ -20,7 +24,7 @@ const IconContext = React.createContext<IconContextType>({
   filteredIcons: [],
   search: () => {},
   filterByCategory: () => {},
-  categories: []
+  categories: CATEGORIES as unknown as Category[]
 });
 
 export function IconProvider({ children }: { children: React.ReactNode }) {
@@ -41,16 +45,6 @@ export function IconProvider({ children }: { children: React.ReactNode }) {
       setFilteredIcons(icons.filter((icon) => icon.category === category));
     }
   }, [icons]);
-
-  React.useEffect(() => {
-    // 初始化时获取所有分类，并格式化为 { label, value }
-    const uniqueCategories = Array.from(new Set(iconData.map((icon) => icon.category)));
-    const formattedCategories = uniqueCategories.map((category) => ({
-      label: category,
-      value: category,
-    }));
-    setCategories(formattedCategories);
-  }, []);
 
   return (
     <IconContext value={{ categories, icons, filteredIcons, search, filterByCategory }}>

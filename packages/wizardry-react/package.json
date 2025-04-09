@@ -5,7 +5,7 @@
   "exports": {
     ".": {
       "types": "./dist/wizardry-react.d.ts",
-      "default": "./dist/esm/wizardry-react.js"
+      "default": "./dist/wizardry-react.js"
     }
   },
   "author": {
@@ -18,30 +18,21 @@
   },
   "scripts": {
     "build": "pnpm clean && pnpm build:icons && pnpm typecheck && pnpm build:bundles",
-    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts && rm -f dynamic.* && rm -f dynamicIconImports.d.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withDynamicImports --separateAliasesFile --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
-    "build:bundles": "rollup -c ./rollup.config.mjs",
+    "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
+    "build:bundles": "tsup",
     "typecheck": "tsc",
     "typecheck:watch": "tsc -w",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
-  "amdName": "wizardry-react",
-  "main": "dist/cjs/wizardry-react.js",
-  "main:umd": "dist/umd/wizardry-react.js",
-  "module": "dist/esm/wizardry-react.js",
-  "unpkg": "dist/umd/wizardry-react.min.js",
+  "main": "dist/wizardry-react.cjs",
+  "module": "dist/wizardry-react.js",
   "typings": "dist/wizardry-react.d.ts",
   "sideEffects": false,
   "files": [
-    "dist",
-    "dynamic.mjs",
-    "dynamic.js.map",
-    "dynamic.d.ts",
-    "dynamicIconImports.mjs",
-    "dynamicIconImports.js.map",
-    "dynamicIconImports.d.ts"
+    "dist"
   ],
   "keywords": [
     "components",
@@ -52,19 +43,16 @@
   ],
   "type": "module",
   "devDependencies": {
-    "@wizardry/rollup-plugins": "workspace:*",
-    "@wizardry/build-icons": "workspace:*",
-    "@wizardry/shared": "workspace:*",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@turbo/gen": "^2.4.4",
     "@types/node": "^22.13.10",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
-    "rollup": "^4.22.4",
-    "rollup-plugin-dts": "^6.1.0",
-    "rollup-plugin-preserve-directives": "^0.4.0",
+    "@wizardry/build-icons": "workspace:*",
+    "@wizardry/shared": "workspace:*",
     "eslint": "^9.23.0",
+    "tsup": "^8.4.0",
     "typescript": "5.8.2"
   },
   "peerDependencies": {
