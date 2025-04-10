@@ -1,12 +1,12 @@
 import * as React from 'react';
 import iconData from '../data.json';
-import {CATEGORIES} from '@/categories'
+import { CATEGORIES } from '@/categories'
 
 
 
 
-type Category = {label: string, value: string}
-type IconData = {
+export type Category = { label: string, value: string }
+export type IconData = {
   name: string;
   categories: string[];
   tags: string[]
@@ -19,16 +19,24 @@ type IconContextType = {
   search: (query: string) => void;
   filterByCategory: (category: string) => void;
   setSelectedCategory: (category: string) => void;
+  activeCategory: string;
+  activeIcon: IconData | undefined;
+  setActiveIcon: (category: string, icon: IconData) => void;
+  resetActiveIcon: () => void;
 };
 
 const IconContext = React.createContext<IconContextType>({
   icons: [],
   filteredIcons: [],
-  search: () => {},
-  filterByCategory: () => {},
+  search: () => { },
+  filterByCategory: () => { },
   selectedCategory: 'all',
-  setSelectedCategory: () => {},
-  categories: CATEGORIES as unknown as Category[]
+  setSelectedCategory: () => { },
+  categories: CATEGORIES as unknown as Category[],
+  activeCategory: '',
+  activeIcon: undefined,
+  setActiveIcon: () => { },
+  resetActiveIcon: () => { }
 });
 
 export function IconProvider({ children }: { children: React.ReactNode }) {
@@ -36,6 +44,21 @@ export function IconProvider({ children }: { children: React.ReactNode }) {
   const [filteredIcons, setFilteredIcons] = React.useState<IconData[]>(iconData as IconData[]);
   const [categories, setCategories] = React.useState<Category[]>(CATEGORIES as unknown as Category[]);
   const [selectedCategory, setSelectedCategory] = React.useState<string>('all');
+  const [activeCategory, setActiveCategory] = React.useState<string>('');
+  const [activeIcon, setActiveIcon] = React.useState<IconData>();
+
+  // 设置激活图标和分类的方法
+  const handleSetActiveIcon = (category: string, icon: IconData) => {
+    setActiveCategory(category);
+    setActiveIcon(icon);
+  };
+
+  const resetActiveIcon = React.useCallback(() => {
+    setActiveCategory('');
+    setActiveIcon(undefined);
+  }, []);
+
+
   const search = React.useCallback((query: string) => {
     const lowerCaseQuery = query.toLowerCase();
     setFilteredIcons(
@@ -58,7 +81,19 @@ export function IconProvider({ children }: { children: React.ReactNode }) {
   }, [icons]);
 
   return (
-    <IconContext value={{ categories, icons, filteredIcons, search, filterByCategory, selectedCategory, setSelectedCategory }}>
+    <IconContext value={{
+      activeCategory,
+      activeIcon,
+      setActiveIcon: handleSetActiveIcon,
+      resetActiveIcon,
+      categories,
+      icons,
+      filteredIcons,
+      search,
+      filterByCategory,
+      selectedCategory,
+      setSelectedCategory
+    }}>
       {children}
     </IconContext>
   );

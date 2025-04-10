@@ -7,10 +7,11 @@
     <list default="true" id="3b0aca3a-eb53-4c76-a0c1-b37df84b8faf" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/components/collection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/collection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/icon-collection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/icon-collection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/components/icon-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/icon-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/search.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/context/icon-context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/context/icon-context.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/wizardry-react/src/icons/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/wizardry-react/src/icons/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +92,7 @@
       <workItem from="1743873508362" duration="3876000" />
       <workItem from="1744115902195" duration="113000" />
       <workItem from="1744125029240" duration="3131000" />
+      <workItem from="1744302570401" duration="1192000" />
     </task>
     <servers />
   </component>

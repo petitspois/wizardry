@@ -1,10 +1,10 @@
 'use client'
 import * as React from 'react';
-import {useIconContext} from '@/context/icon-context';
+import {useIconContext, type IconData} from '@/context/icon-context';
 import {IconItem} from './icon-item';
 
 export function Collection() {
-  const {filteredIcons, categories, selectedCategory} = useIconContext();
+  const {filteredIcons, categories, selectedCategory, activeCategory, activeIcon, setActiveIcon} = useIconContext();
   // 判断分类是否在图标的分组中
   const isCategoryInIcon = (iconCategories: string[], category: string) => {
     return iconCategories.includes(category);
@@ -44,7 +44,10 @@ export function Collection() {
 
   const isEmpty = Object.values(groupedIcons).every(icons => icons.length === 0);
 
-  console.log(groupedIcons, 'groupedIcons')
+  const handleActivedIcon = React.useCallback((category: string, icon: IconData) => {
+    setActiveIcon(category, icon);
+  }, [])
+
   return (
     <div className="container-wrapper grow">
       <div className="container py-6 space-y-4">
@@ -61,7 +64,7 @@ export function Collection() {
                 </h3>
                 <div className="px-4 grid grid-cols-[repeat(auto-fill,minmax(110px,1fr))] gap-3">
                   {icons.map((icon) => (
-                    <IconItem key={icon.name} name={icon.name}/>
+                    <IconItem onClick={() => handleActivedIcon(category, icon)} selected={activeCategory === category && activeIcon?.name === icon.name} key={icon.name} name={icon.name}/>
                   ))}
                 </div>
               </div>

@@ -4,6 +4,7 @@ import * as React from 'react';
 import { IconProvider } from '@/context/icon-context'
 import {Search} from "@/components/search";
 import {Collection} from "@/components/collection";
+import { IconPanel } from '@/components/icon-panel'
 
 export function IconCollection() {
   return (
@@ -16,6 +17,7 @@ export function IconCollection() {
           <Collection />
         </div>
       </div>
+      <IconPanel />
     </IconProvider>
   );
 };
