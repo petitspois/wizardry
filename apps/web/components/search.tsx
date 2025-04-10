@@ -12,14 +12,13 @@ import {useIconContext} from '@/context/icon-context'
 import { useDebounceFn } from 'ahooks'
 
 export function Search() {
-  const {filteredIcons, search, categories, filterByCategory} = useIconContext();
+  const {selectedCategory, search, categories, filterByCategory} = useIconContext();
 
   const {run: handleInputChange} = useDebounceFn((e: React.ChangeEvent<HTMLInputElement>) => {
     search(e.target.value);
   }, {wait: 300});
 
   const handleCategoryChange = (value: string) => {
-    console.log(value)
     filterByCategory(value);
   };
 
@@ -27,7 +26,7 @@ export function Search() {
     <div className="container-wrapper">
       <div className="container py-6">
         <div className="w-full rounded-2xl flex items-center gap-2 px-4">
-          <Select onValueChange={handleCategoryChange}>
+          <Select onValueChange={handleCategoryChange} value={selectedCategory}>
             <SelectTrigger className="w-[180px] !h-10 border-none shadow-none bg-input/40">
               <div className="inline-flex gap-2 items-center">
                 <FilterLine/>

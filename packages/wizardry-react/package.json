@@ -1,6 +1,6 @@
 {
   "name": "wizardry-react",
-  "version": "0.0.7",
+  "version": "0.0.1",
   "description": "A Wizardry icon library package for React applications.",
   "exports": {
     ".": {
@@ -25,7 +25,8 @@
     "typecheck:watch": "tsc -w",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch",
-    "version": "pnpm version --git-tag-version=false"
+    "version": "pnpm version --git-tag-version=false",
+    "pub:release": "pnpm build && pnpm publish --access public"
   },
   "main": "dist/wizardry-react.cjs",
   "module": "dist/wizardry-react.js",

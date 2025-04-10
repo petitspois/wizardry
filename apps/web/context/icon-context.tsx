@@ -3,20 +3,22 @@ import iconData from '../data.json';
 import {CATEGORIES} from '@/categories'
 
 
+
+
+type Category = {label: string, value: string}
 type IconData = {
   name: string;
   categories: string[];
   tags: string[]
 };
-
-type Category = {label: string, value: string}
-
 type IconContextType = {
   icons: IconData[];
   categories: Category[];
+  selectedCategory: string;
   filteredIcons: IconData[];
   search: (query: string) => void;
   filterByCategory: (category: string) => void;
+  setSelectedCategory: (category: string) => void;
 };
 
 const IconContext = React.createContext<IconContextType>({
@@ -24,30 +26,39 @@ const IconContext = React.createContext<IconContextType>({
   filteredIcons: [],
   search: () => {},
   filterByCategory: () => {},
+  selectedCategory: 'all',
+  setSelectedCategory: () => {},
   categories: CATEGORIES as unknown as Category[]
 });
 
 export function IconProvider({ children }: { children: React.ReactNode }) {
-  const [icons, setIcons] = React.useState<IconData[]>(iconData);
-  const [filteredIcons, setFilteredIcons] = React.useState<IconData[]>(iconData);
-  const [categories, setCategories] = React.useState<{ label: string; value: string }[]>([]);
+  const [icons, setIcons] = React.useState<IconData[]>(iconData as IconData[]);
+  const [filteredIcons, setFilteredIcons] = React.useState<IconData[]>(iconData as IconData[]);
+  const [categories, setCategories] = React.useState<Category[]>(CATEGORIES as unknown as Category[]);
+  const [selectedCategory, setSelectedCategory] = React.useState<string>('all');
   const search = React.useCallback((query: string) => {
     const lowerCaseQuery = query.toLowerCase();
     setFilteredIcons(
-      icons.filter((icon) => icon.name.toLowerCase().includes(lowerCaseQuery))
+      icons.filter((icon) =>
+        icon.name.toLowerCase().includes(lowerCaseQuery) ||
+        icon.tags.some(tag => tag.toLowerCase().includes(lowerCaseQuery))
+      )
     );
   }, [icons]);
 
   const filterByCategory = React.useCallback((category: string) => {
+    setSelectedCategory(category);
     if (category === 'all') {
       setFilteredIcons(icons);
     } else {
-      setFilteredIcons(icons.filter((icon) => icon.category === category));
+      setFilteredIcons(icons.filter((icon) =>
+        icon.categories.some((cat) => cat === category)
+      ));
     }
   }, [icons]);
 
   return (
-    <IconContext value={{ categories, icons, filteredIcons, search, filterByCategory }}>
+    <IconContext value={{ categories, icons, filteredIcons, search, filterByCategory, selectedCategory, setSelectedCategory }}>
       {children}
     </IconContext>
   );
