@@ -8,6 +8,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
     "build:www": "pnpm --filter=www build",
+    "build:icon": "pnpm --filter=wizardry-react build",
     "addjsons": "node scripts/addMissingIconJsonFiles.mjs",
     "generate:categories": "node scripts/generateCategories.mjs",
     "pub:release": "cd packages/wizardry-react && pnpm pub:release"

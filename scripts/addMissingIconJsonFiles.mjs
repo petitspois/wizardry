@@ -10,7 +10,8 @@ const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
 
 const svgFiles = await readSvgDirectory(ICONS_DIR);
-
+const packageJsonPath = path.resolve(currentDir, '../packages/wizardry-react/package.json');
+const packageJson = JSON.parse(await readFile(packageJsonPath));
 // 读取现有的 data.json 文件
 const dataFilePath = path.resolve(currentDir, '../apps/web/data.json');
 let existingData = [];
@@ -34,6 +35,8 @@ const data = svgFiles.map((svgFile) => {
     return existingItem;
   }
   return {
+    version: packageJson.version,
+    created: new Date().toISOString(),
     name: iconName,
     categories: [],
     tags: [iconName.split('-')[0]],

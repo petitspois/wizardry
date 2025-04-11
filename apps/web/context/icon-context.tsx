@@ -9,7 +9,10 @@ export type Category = { label: string, value: string }
 export type IconData = {
   name: string;
   categories: string[];
-  tags: string[]
+  tags: string[];
+  version: string;
+  created: string;
+
 };
 type IconContextType = {
   icons: IconData[];

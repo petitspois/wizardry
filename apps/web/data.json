@@ -1,39 +1,85 @@
 [
   {
-    "name": "filter-line",
-    "categories": [
-      "system",
-      "ai"
-    ],
+    "version": "0.0.2",
+    "created": "2025-04-11T15:03:17.672Z",
+    "name": "circle-one-fill",
+    "categories": ["system"],
     "tags": [
-      "filter"
+      "circle",
+      "round",
+      "ring",
+      "loop",
+      "orbit",
+      "circuit",
+      "cycle"
     ]
   },
   {
+    "version": "0.0.1",
+    "created": "2025-04-11T13:54:17.865Z",
+    "name": "filter-line",
+    "categories": [
+      "system"
+    ],
+    "tags": [
+      "filter",
+      "filtration",
+      "screen",
+      "sift",
+      "weed out",
+      "cull",
+      "select"
+    ]
+  },
+  {
+    "version": "0.0.1",
+    "created": "2025-04-11T13:54:17.866Z",
     "name": "search-one-line",
     "categories": [
       "system"
     ],
     "tags": [
-      "search"
+      "search",
+      "seek",
+      "hunt",
+      "locate",
+      "scour",
+      "rummage",
+      "explore"
     ]
   },
   {
+    "version": "0.0.1",
+    "created": "2025-04-11T13:54:17.866Z",
     "name": "search-three-line",
     "categories": [
       "system"
     ],
     "tags": [
-      "search"
+      "search",
+      "seek",
+      "hunt",
+      "locate",
+      "scour",
+      "rummage",
+      "explore"
     ]
   },
   {
+    "version": "0.0.1",
+    "created": "2025-04-11T13:54:17.866Z",
     "name": "search-two-line",
     "categories": [
       "system"
     ],
     "tags": [
-      "search"
+      "search",
+      "seek",
+      "hunt",
+      "locate",
+      "scour",
+      "rummage",
+      "explore"
     ]
   }
 ]

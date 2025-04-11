@@ -1,5 +1,6 @@
 import { createElement, forwardRef } from 'react';
 import defaultAttributes from './defaultAttributes';
+import defaultFillAttributes from './defaultFillAttributes';
 import { IconNode, WizardryProps } from './types';
 import { mergeClasses } from '@wizardry/shared';
 
@@ -36,15 +37,17 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
     },
     ref,
   ) => {
+    const hasFill = className.includes('-fill');
     return createElement(
       'svg',
       {
         ref,
         ...defaultAttributes,
+        ...(hasFill ? defaultFillAttributes : {}), // 条件应用填充属性
         width: size,
         height: size,
-        stroke: color,
-        strokeWidth: absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
+        ...(hasFill ? { fill: color } : {stroke: color}),
+        strokeWidth: hasFill? 0 : absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
         className: mergeClasses('wizardry', className),
         ...rest,
       },

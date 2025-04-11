@@ -1,16 +1,14 @@
 'use client'
 import * as React from 'react';
 import * as Icons from 'wizardry-react';
+import { getComponentName } from '@/lib/utils';
 type IconItemProps = {
   name: string;
   selected?: boolean;
 };
 
 export function IconItem({ name, selected, ...props }: IconItemProps & React.HTMLAttributes<HTMLDivElement>) {
-  const componentName = name
-    .split('-')
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join('');
+  const componentName = getComponentName(name)
   const IconComponent = Icons[componentName as keyof typeof Icons] as React.ComponentType<React.SVGProps<SVGSVGElement>>;
   const iconRef = React.useRef<SVGSVGElement>(null);
 

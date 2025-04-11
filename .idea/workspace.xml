@@ -6,12 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="3b0aca3a-eb53-4c76-a0c1-b37df84b8faf" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/collection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/collection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/icon-collection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/icon-collection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/components/icon-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/icon-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/icon-panel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/icon-panel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/context/icon-context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/context/icon-context.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/lib/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/wizardry-react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-react/src/Icon.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/wizardry-react/src/Icon.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/wizardry-react/src/icons/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/wizardry-react/src/icons/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/addMissingIconJsonFiles.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/addMissingIconJsonFiles.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/AI/filter-line.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/AI/search-one-line.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/AI/search-three-line.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/AI/search-two-line.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Other/search-two-line.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,29 +40,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jonny/develop/wizardry&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/jonny/develop/wizardry/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/jonny/develop/wizardry/icons",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/jonny/develop/wizardry/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/icons" />
+      <recent name="$PROJECT_DIR$/packages/wizardry-react/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/packages" />
       <recent name="$PROJECT_DIR$/packages/wizardry-icon/src/source/Other" />
-      <recent name="$PROJECT_DIR$/packages/wizardry-icon/src/source" />
-      <recent name="$PROJECT_DIR$/apps/web/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/wizardry-icon/src/source/AI" />
@@ -92,7 +103,8 @@
       <workItem from="1743873508362" duration="3876000" />
       <workItem from="1744115902195" duration="113000" />
       <workItem from="1744125029240" duration="3131000" />
-      <workItem from="1744302570401" duration="1192000" />
+      <workItem from="1744302570401" duration="1232000" />
+      <workItem from="1744375300280" duration="9374000" />
     </task>
     <servers />
   </component>
